@@ -14,7 +14,6 @@ class App extends Component{
   }
   // searches for firts 30 users
 componentDidMount(){
-  console.log(process.env.REACT_APP_GITHUB_ClientID);
   this.setState({loading:true})
   fetch(`https://api.github.com/users?client_id = ${process.env.REACT_APP_GITHUB_ClientID}&
   client_secret=${process.env.REACT_APP_GITHUB_Secret}`)
