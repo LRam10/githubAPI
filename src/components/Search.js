@@ -1,25 +1,24 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-class Search extends Component {
-    state = {
-        text:''
-    }
-    onSubmit = (e) =>{
+const Search = ({clearUsers,searchUsers,showClear,showAlert})=> {
+ const [text,setText] = useState(' ');
+    const onSubmit = (e) =>{
         e.preventDefault();
-        this.props.searchUsers(this.state.text);
-        this.setState({text:' '});
+        if(text === '' || text === ' ' ){
+           showAlert('Please input something...','danger');
+        }
+        else{
+            searchUsers(text);
+            setText(' ');
+        }
     }
-    onChange = (e) => this.setState({[e.target.name]:e.target.value});
-    
-    render() {
-        //destructuring
-        const {showClear,clearUsers} = this.props;
+    const onChange = (e) => setText(e.target.value);
         return (
             <div>
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={onSubmit}>
                     <div className="form-group">
                     <input type="text" name="text" className="form-control" placeholder="Search User..." 
-                    value={this.state.text} onChange={this.onChange}/>
+                    value={text} onChange={onChange}/>
                     <input type="submit" className="btn btn-sm btn-dark d-inline-block" value="Search" />
                     </div>
                 </form>
@@ -28,7 +27,7 @@ class Search extends Component {
                 )}
             </div>
         )
-    }
+    
 }
 const full ={
 width:'100%'
