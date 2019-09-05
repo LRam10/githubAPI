@@ -20,21 +20,21 @@ const showAlert = (msg,type) =>{
 }
     return (
       <GithubState>
-      <Router>
+      <Router basename="/githubAPI">
       <div className="App">
         <Navbar/>
         <div className="container">
         <Alert alert={alert}/>
         <Switch>
-          <Route exact path='/' render ={prop =>(
+          <Route path={`${process.env.PUBLIC_URL}/`} render ={prop =>(
             <Fragment>
               <Search
               showAlert={showAlert}/>
               <Users/>
             </Fragment>
           )}/>
-          <Route exact path='/about' component={About}/>
-          <Route exact path='/user/:login' component = {User}
+          <Route  path={`${process.env.PUBLIC_URL}/about`} component={About}/>
+          <Route  path={`${process.env.PUBLIC_URL}/user:login`} component = {User}
           /> 
         </Switch>
         </div>
