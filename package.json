@@ -2,7 +2,7 @@
   "name": "github-user",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lram10.github.io/githubAPI",
+  "homepage": ".",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.8.6",
