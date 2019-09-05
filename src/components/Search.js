@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
-
-const Search = ({clearUsers,searchUsers,showClear,showAlert})=> {
+import React, { useState,useContext} from 'react'
+import GithubContext from '../context/github/githubContext';
+//deconstrucing from properties
+const Search = ({showAlert})=> {
+ const githubContext = useContext(GithubContext);   
  const [text,setText] = useState(' ');
     const onSubmit = (e) =>{
         e.preventDefault();
@@ -8,8 +10,7 @@ const Search = ({clearUsers,searchUsers,showClear,showAlert})=> {
            showAlert('Please input something...','danger');
         }
         else{
-            searchUsers(text);
-            setText(' ');
+            githubContext.searchUsers(text);
         }
     }
     const onChange = (e) => setText(e.target.value);
@@ -22,8 +23,8 @@ const Search = ({clearUsers,searchUsers,showClear,showAlert})=> {
                     <input type="submit" className="btn btn-sm btn-dark d-inline-block" value="Search" />
                     </div>
                 </form>
-                {showClear && (
-                    <button style={full}className="btn btn-light d-block mx-auto" onClick={clearUsers}>Clear</button>
+                {githubContext.users.length > 0 && (
+                    <button style={full}className="btn btn-light d-block mx-auto" onClick={githubContext.clearUsers}>Clear</button>
                 )}
             </div>
         )

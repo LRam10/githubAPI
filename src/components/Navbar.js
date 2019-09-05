@@ -5,7 +5,7 @@ function Navbar() {
     
         return (
             <nav className="navbar navbar-exapnds-lg bg-light mb-3">
-                <a className="navbar-brand" href="#">Welcome <i className="fab fa-github"></i></a>
+                <a className="navbar-brand text-dark" href="#">Welcome <i className="fab fa-github"></i></a>
             <ul className="nav justify-content-end">
                 <li className="nav-item">
                     <Link className="nav-link active" to="/">Home</Link>
