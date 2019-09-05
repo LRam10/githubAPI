@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,UACE,SAAU,CACV,QACF,CACA,EACE,aACF,CACA,cACE,SAAU,CACV,oBAAqB,CACrB,gBACF","file":"main.b8769e04.chunk.css","sourcesContent":["html,body{\n  padding: 0;\n  margin:0;\n}\na{\n  color:#303030;\n}\n.form-control{\n  width: 85%;\n  display: inline-block;\n  margin-right: 5px;\n}"]}
