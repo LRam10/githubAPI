@@ -8,7 +8,7 @@ function Navbar() {
                 <a className="navbar-brand text-dark" href="#">Welcome <i className="fab fa-github"></i></a>
             <ul className="nav justify-content-end">
                 <li className="nav-item">
-                    <Link className="nav-link active" to="/">Home</Link>
+                    <Link className="nav-link active" to={`${process.env.PUBLIC_URL}/`}>Home</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/about">About</Link>
