@@ -20,7 +20,7 @@ const showAlert = (msg,type) =>{
 }
     return (
       <GithubState>
-      <Router basename="/githubAPI">
+      <Router basename="/">
       <div className="App">
         <Navbar/>
         <div className="container">
