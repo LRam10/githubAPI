@@ -33,8 +33,8 @@ const showAlert = (msg,type) =>{
               <Users/>
             </Fragment>
           )}/>
-          <Route  path={`${process.env.PUBLIC_URL}/about`} component={About}/>
-          <Route  path={`${process.env.PUBLIC_URL}/user:login`} component = {User}
+          <Route  path='/about'component={About}/>
+          <Route  path='/user:login'component = {User}
           /> 
         </Switch>
         </div>
