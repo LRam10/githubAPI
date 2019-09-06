@@ -33,8 +33,8 @@ const showAlert = (msg,type) =>{
               <Users/>
             </Fragment>
           )}/>
-          <Route exact path='/about' component={About}/>
-          <Route  exact path='/user/:login' component={User}
+          <Route  path='/about' component={About}/>
+          <Route  path='/user/:login' component={User}
           /> 
         </Switch>
         </div>
