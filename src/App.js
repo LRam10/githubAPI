@@ -26,7 +26,7 @@ const showAlert = (msg,type) =>{
         <div className="container">
         <Alert alert={alert}/>
         <Switch>
-          <Route path='/' render ={prop =>(
+          <Route path={`${process.env.PUBLIC_URL}/`} render ={prop =>(
             <Fragment>
               <Search
               showAlert={showAlert}/>
